@@ -16,7 +16,7 @@ int sz[100005];
 
 int root(long long x){	//root finding function
     
-	if(par[x]==x)
+    if(par[x]==x)
         return x;
 
     par[x]=root(par[x]);
@@ -47,12 +47,12 @@ void un(int x,int y){ //union function
 
 int main(){
     
-	int nodes;
-	cin>>nodes;
+    int nodes;
+    cin>>nodes;
 
     for(int i=1;i<=nodes;i++){	
         par[i]=i;	//initially, everything is in its own set.
         sz[i]=1;	
-	}
+    }
 
 }
