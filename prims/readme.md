@@ -17,7 +17,6 @@ While (there are still nontree vertices)
 ## Time Complexity:
 Time complexity of Prim's Algorithm depends on the implementation.
 
-In my implementation:
 Each edge is visited exactly twice, thus in the worst case there are almost O(E) inserts.(Since priority queue doesn't support updates).
 
 Also, there are atmost O(E) items in the priority_queue.
