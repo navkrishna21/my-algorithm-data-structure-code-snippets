@@ -28,8 +28,8 @@ int main(){
         adj[y].push_back({x,wt});
     }
  
-    int dist[n+1];
-    bool vis[n+1];
+    int dist[n+1]; // To update and maintain the distances of nodes from the MST tree that are not in the MST tree yet
+    bool vis[n+1]; // to keep track of visited nodes
     for(int i=1;i<=n;i++){
         dist[i]=1000001; //initialize distance array to an infinite number
         vis[i]=false; //initialize visited array to false
@@ -60,8 +60,8 @@ int main(){
         ans+=w; //add edge weight to answer
  
         for(auto neighb : adj[node] ){ 
-            if( neighb.second< dist[neighb.first] ){ //update distances
-                dist[neighb.first]=neighb.second;
+            if( neighb.second< dist[neighb.first] ){ //if a shorter edge to the node is found
+                dist[neighb.first]=neighb.second; //update distances
                 pq.push({neighb.first,neighb.second}); //add the adjacent node and the edge weight connecting it
             }
         }
