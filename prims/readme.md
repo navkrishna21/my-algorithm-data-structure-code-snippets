@@ -5,7 +5,7 @@ Prim's algorithm is a greedy algorithm that finds a minimum spanning tree for a 
 ## Pseudocode:
 ```
 Select an arbitrary vertex s to start the tree from.
-   
+
 While (there are still nontree vertices)
   
   Select the edge of minimum weight between a tree and nontree vertex
