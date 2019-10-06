@@ -18,7 +18,7 @@ int main(){
  
         matrix mat(m,vector<long long>(m)); //initialize a matrix of m X m
      
-        //input matrix
+        //input the matrix
         for(int i=0;i<m;i++)
             for(int j=0;j<m;j++)
                 cin>>mat[i][j];
