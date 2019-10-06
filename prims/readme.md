@@ -23,7 +23,7 @@ Also, there are atmost O(E) items in the priority_queue.
 
 priority_queue supports all these operations in logarithmic time. Hence one insert takes O(logE) time.
 
-There are V deletes too. but they are neglected since for this algorithm to work V-1 <= E
+There are V deletes too, but they are neglected since for this algorithm to work V-1 <= E
 
 Total time complexity is O(ElogE + VlogE) = O(ElogE)
 
