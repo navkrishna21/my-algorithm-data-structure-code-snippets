@@ -26,7 +26,6 @@ priority_queue supports all these operations in logarithmic time. Hence one inse
 There are V deletes too. but they are neglected since for this algorithm to work V-1 <= E
 
 Total time complexity is O(ElogE + VlogE) = O(ElogE)
-Since for 
 
 ## Problem Link for the code:
 [MST - Minimum Spanning Tree](https://www.spoj.com/problems/MST/)
