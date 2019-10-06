@@ -29,9 +29,10 @@ int main(){
     }
  
     int dist[n+1];
-    
+    bool vis[n+1];
     for(int i=1;i<=n;i++){
         dist[i]=1000001; //initialize distance array to an infinite number
+        vis[i]=false; //initialize visited array to false
     }
  
     priority_queue<pair<int,int>, vector<pair<int,int> >,comp >pq; //min-heap
@@ -50,13 +51,17 @@ int main(){
         int node =  pq.top().first;
         int w= pq.top().second;
         pq.pop();
-
+     
+        if(vis[node]) //Node already in MST
+            continue;
+        vis[node]=true;
+        
         unvisited--;
         ans+=w; //add edge weight to answer
  
         for(auto neighb : adj[node] ){ 
-            if( neighb.second< dist[neighb.first] ){ //if a smaller edge to a vertex is found
-                dist[neighb.first]=neighb.second; //update distance
+            if( neighb.second< dist[neighb.first] ){ //update distances
+                dist[neighb.first]=neighb.second;
                 pq.push({neighb.first,neighb.second}); //add the adjacent node and the edge weight connecting it
             }
         }
