@@ -21,7 +21,7 @@ Each edge is visited exactly twice, thus in the worst case there are almost O(E)
 
 Also, there are atmost O(E) items in the priority_queue.
 
-priority_queue supports all these operations in logarithmic time. Hence one insert takes O(E) time.
+priority_queue supports all these operations in logarithmic time. Hence one insert takes O(logE) time.
 
 There are V deletes too. but they are neglected since for this algorithm to work V-1 <= E
 
