@@ -2,7 +2,7 @@
 
 ## Pseudocode
 
-```
+
 * create a forest F (a set of trees), where each vertex in the graph is a separate tree
 * create a set S containing all the edges in the graph
 * while S is nonempty and F is not yet spanning
@@ -13,5 +13,5 @@
 
 At the termination of the algorithm, the forest forms a minimum spanning forest of the graph. If the graph is connected, the forest has a single component and forms a minimum spanning tree
 
-```
+
 
