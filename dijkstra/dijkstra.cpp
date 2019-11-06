@@ -6,8 +6,8 @@ bool vis [SIZE];
 
 void dijkstra(){
                      
-	for(int i=1;i<=SIZE;i++)
-		dist[i]=INF;                           // set the vertices distances as infinity
+    for(int i=1;i<=SIZE;i++)
+	dist[i]=INF;                           // set the vertices distances as infinity
 
     memset(vis, false , sizeof vis);            // set all vertex as unvisited
     dist[1] = 0;
@@ -19,12 +19,12 @@ void dijkstra(){
 
         pair <int , int> p = *s.begin();        // pop the vertex with the minimum distance
         
-		s.erase(s.begin());
+	s.erase(s.begin());
 
         int x = p.s; int wei = p.f;
         
-		if( vis[x] ) continue;                  // check if the popped vertex is visited before
-         vis[x] = true;
+	if( vis[x] ) continue;                  // check if the popped vertex is visited before
+        	 vis[x] = true;
 
         for(int i = 0; i < v[x].size(); i++){
             int e = v[x][i].f; int w = v[x][i].s;
